@@ -76,14 +76,16 @@ public class BuildLexicon {
      */
     // Methode a  realiser
     public static HashMap<String, Integer> countSentencesWithWord(String txt) {
-       // HashMap<String,ArrayList<String>> mots = new HashMap<String>();
+        HashMap<String,Integer> occ = new HashMap<String,Integer>();
         String[] phrases = txt.split("\n");
-        for (String phrase : phrases  ){
-            String[] phrase = {"alpha","beta","haribo"};
-            phrase = []
-        HashSet<String> uniqWord = new HashSet<String>(Arrays.asList(tab));
-        System.out.println(uniqWord);
-
+        for (String phrases : phrase ){
+            //String[] mots = {"alpha","beta","haribo"};
+            String[] mots = phrases.split(" ");
+        HashSet<String> motsUniqueDansLaPhrase = new HashSet(Arrays.asList(phrase));
+        for(String unMot : motsUniqueDansLaPhrase){
+            Integer nb = occ.get(mot);
+        }
+        System.out.println(motsUniqueDansLaPhrase);
 
         return null;
         }
