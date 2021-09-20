@@ -5,10 +5,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Ip{
 
-    public static boolean isInteger(String s) {
+   public static boolean isInteger(String s) {
         try {
             Integer.parseInt(s);
             return true;
@@ -35,7 +36,7 @@ public class Ip{
             return false;
         }
 
-        // verifie tous les X
+       // verifie tous les adresses
         for (String s : c) {
             if (!isInteger(s)) {
                 return false;
@@ -49,7 +50,7 @@ public class Ip{
 
         return true;
     }
-
+/*
     public static void testCheckIP() {
 
         String[] validIp = {"127.0.0.1",
@@ -137,7 +138,7 @@ public class Ip{
     public static ArrayList<String> readLines(String filename) {
         List<String> lines = null;
         try {
-            lines = Files.readAllLines(Paths.get(filename), Charset.forName("UTF-8"));
+           lines = Files.readAllLines(Paths.get(filename), Charset.forName("UTF-8"));
         } catch (IOException e) {
             System.out.println("Erreur lors de la lecture de " + filename);
             System.exit(1);
@@ -177,7 +178,14 @@ public class Ip{
         HashMap<Character, Character> key = createKey(5, alphabet);
 
         String s = encode("What else ?", key);
-        HashMap<String, Double> wordProbability = computeWordProbability("count_1w.txt");
+        HashMap<String, Double> wordProbability = computeWordProbability("texte_anglais.txt");
         System.out.println(decipher(generateAllDecodings(s, alphabet), wordProbability));
+    }
+}*/
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ton adresse ip: ");
+        String ip = sc.next();
+        System.out.println(check(ip));
     }
 }
