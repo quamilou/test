@@ -37,10 +37,10 @@ public class StaticSet {
 
     public String toString() {
         Arrays.sort(this.data, 0, this.lastEl);
-        String resul = " ";
+        String resul = "";
 
         for (int i = 0; i < this.lastEl; i++) {
-            resul += this.data[i] + " - ";
+            resul += this.data[i] + "-";
         }
 
         return resul.substring(0, resul.length() - 1);

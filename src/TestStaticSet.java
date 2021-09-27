@@ -18,6 +18,7 @@ public class TestStaticSet {
 
         String expectedRes = "1-2-3";
         String res = s.toString();
+        System.out.println(s.toString());
 
         return res.equals(expectedRes);
     }
