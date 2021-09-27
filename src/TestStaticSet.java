@@ -15,8 +15,10 @@ public class TestStaticSet {
         s.add(1);
         s.add(3);
         s.add(2);
-
-        String expectedRes = "1-2-3";
+        for(int i=0; i<15; i++) {
+        s.add(i);
+        }
+        String expectedRes = "0-1-2-3-4-5-6-7-8-9";
         String res = s.toString();
         System.out.println(s.toString());
 
@@ -32,6 +34,7 @@ public class TestStaticSet {
 
     public static void main(String[] argx) {
         TestStaticSet t = new TestStaticSet();
+
         if (!t.test()) {
             System.out.println("\n\n Échec");
         }
