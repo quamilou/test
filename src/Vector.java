@@ -9,13 +9,13 @@ public class Vector {
         this.y = y;
         this.z = z ;
     }
-
+/*
     public Vector() {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+        this.x = a;
+        this.y = b;
+        this.z = c;
     }
-
+*/
     public String toString() {
         return "( " + this.x + ", " + this.y + ", " + this.z + " )";
     }
