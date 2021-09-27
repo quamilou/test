@@ -20,7 +20,7 @@ public class TestStaticSet {
         }
         String expectedRes = "0-1-2-3-4-5-6-7-8-9";
         String res = s.toString();
-        System.out.println(s.toString());
+        //System.out.println(s.toString());
 
         return res.equals(expectedRes);
     }
