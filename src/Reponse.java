@@ -9,4 +9,9 @@ public class Reponse {
 
     }
     //met
+
+    @Override
+    public String toString() {
+        return enonceReponse;
+    }
 }

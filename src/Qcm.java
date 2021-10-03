@@ -8,6 +8,15 @@ public class Qcm {
     }
     public void ajouterQuestion(Question question){
         lesQuestions.add(question);
+
+    }
+    @Override
+    public String toString() {
+        String res = "";
+        for(Question question : lesQuestions){
+            res += question.toString();
+        }
+        return res;
     }
     public static void main(String[] args){
         Question nbPremiers = new Question("A propos des nombres premiers");
@@ -33,5 +42,7 @@ public class Qcm {
         Qcm leQCM = new Qcm();
         leQCM.ajouterQuestion(nbPremiers);
         leQCM.ajouterQuestion(temps);
+
+        System.out.println(leQCM);
     }
 }
