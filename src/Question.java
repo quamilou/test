@@ -1,16 +1,46 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Question {
+    private List<Reponse> reponses;
+    private Integer selectReponse;
     private String enoncer;
-    private ArrayList<Reponse> reponses;
 
-    public Question(String enonce){
-
-        this.enoncer=enonce;
+    public Question(String enoncer){
+        this.enoncer=enoncer;
         this.reponses = new ArrayList<>();
     }
-    public void ajouterReponse(Reponse rep){
-        reponses.add(rep);
+    public Question(String enoncer, List<Reponse> questions){
+        this.reponses = questions;
+        this.enoncer = enoncer;
+    }
+    public void ajouterReponse(Reponse a){ reponses.add(a);}
+    public void selectReponse(int i){
+        selectReponse = i;
+        System.out.println("you select is : "+i );
+    }
+
+    public boolean estCorrect(){
+        if(selectReponse==null){
+            return false;
+        }
+            Reponse laReponse = reponses.get(selectReponse);//get error ?
+            return laReponse.estCorrect();
+    }
+
+    public int nbBonneReponse(){
+        int nb = 0;
+        for(Reponse a: reponses){
+            if (a.estCorrect()){
+                nb++;
+            }
+        }
+        return nb;
+    }
+    public void poseUneQuestion(Scanner sc){
+        System.out.println(this);
+        selectReponse(Utils.enterPositiveInt(reponses.size()-1));
     }
 
     @Override
@@ -19,8 +49,8 @@ public class Question {
         res+= enoncer + " : \n";
         //on boucle pour avoir chaque Question un numero puis son texte
         for (int i=0; i<reponses.size(); i++){
-            res+= Integer.toString(i+1);  //le Interger.toString n'est pas obligatoire
-            res+= " "+ reponses.get(i).toString();// pareil pour le .toString il n'est pas obligatoire
+            res+= Integer.toString(i);  //le Interger.toString n'est pas obligatoire
+            res+= "- "+ reponses.get(i).toString();// pareil pour le .toString il n'est pas obligatoire
             res+= "\n";
         }
         return res;

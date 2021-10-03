@@ -9,7 +9,9 @@ public class Reponse {
 
     }
     //met
-
+    public boolean estCorrect(){
+        return rep;
+    }
     @Override
     public String toString() {
         return enonceReponse;
