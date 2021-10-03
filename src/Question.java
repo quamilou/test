@@ -9,4 +9,8 @@ public class Question {
         this.enoncer=enonce;
         this.reponses = new ArrayList<>();
     }
+    public void ajouterReponse(Reponse rep){
+        reponses.add(rep);
+
+    }
 }
