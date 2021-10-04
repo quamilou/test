@@ -1,3 +1,5 @@
+package Tp2;
+
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -50,8 +52,8 @@ public class Ip{
 
         return true;
     }
-/*
-    public static void testCheckIP() {
+
+    /*public static void testCheckIP() {
 
         String[] validIp = {"127.0.0.1",
                 "127.231.1.1",

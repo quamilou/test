@@ -1,3 +1,5 @@
+package Tp4;
+
 import java.util.Arrays;
 public class DynamicSet {
     //att

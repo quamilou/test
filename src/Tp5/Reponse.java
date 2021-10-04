@@ -1,3 +1,5 @@
+package Tp5;
+
 public class Reponse {
     //att
     private String enonceReponse;

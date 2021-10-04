@@ -1,3 +1,4 @@
+package Tp5;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,21 +13,21 @@ public class Question {
         this.reponses = new ArrayList<>();
     }
     public Question(String enoncer, List<Reponse> questions){
-        this.reponses = questions;
         this.enoncer = enoncer;
+        this.reponses = questions;
     }
     public void ajouterReponse(Reponse a){ reponses.add(a);}
     public void selectReponse(int i){
         selectReponse = i;
-        System.out.println("you select is : "+i );
+        System.out.println("your select is : "+ i);
     }
 
     public boolean estCorrect(){
         if(selectReponse==null){
             return false;
         }
-            Reponse laReponse = reponses.get(selectReponse);//get error ?
-            return laReponse.estCorrect();
+        Reponse laReponse = reponses.get(selectReponse);//get error ?
+        return laReponse.estCorrect();
     }
 
     public int nbBonneReponse(){
@@ -40,7 +41,7 @@ public class Question {
     }
     public void poseUneQuestion(Scanner sc){
         System.out.println(this);
-        selectReponse(Utils.enterPositiveInt(reponses.size()-1));
+        selectReponse(Utils.enterPositiveInt(reponses.size()));
     }
 
     @Override
