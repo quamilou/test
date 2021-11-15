@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 //moyenne= note /20 le tout sur le nombre de note
-public class world {
-    /*public static void main(String[] args) {
+/*public class world {
+    public static void main(String[] args) {
         System.out.print("Bonjour, suivez les instructions "+"\n");
         //int note1=10; int note2=0; int note3=0;
         Scanner sc = new Scanner(System.in);
@@ -26,7 +26,3 @@ public class world {
         System.out.println("ta moyenne est de: "+moyenne);
 
     }*/
-    public static void main(String[] args){
-
-    }
-}
